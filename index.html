@@ -11,14 +11,28 @@
 </head>
 <body>
     <h1>Tempo Certo</h1>
+
+    <div id="unidade-container">
+        <label for="tempUnit">Mostrar temperatura em:</label>
+        <select id="tempUnit" aria-label="Selecionar unidade de temperatura">
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+      </select>
+    </div>
+
     <form id="clima-form">
         <input type="text" id="cidade-input" placeholder="Digite o nome da cidade" />
         <button type="submit" id="btn-buscar">Buscar</button>
     </form>
 
-<button id="btn-nova-pesquisa" class="btn-nova-pesquisa">Nova Pesquisa</button>
-<div id="clima-resultado">Informe uma cidade para ver o clima.</div>
+    <div id="clima-resultado">Informe uma cidade para ver o clima.</div>
 
+    <section id="historico-pesquisas">
+         <h2>Histórico de Pesquisas</h2>
+         <ul id="listaHistorico"></ul>
+    </section>
+    
     <script src="script.js"></script>
+
 </body>
 </html>

@@ -4,12 +4,11 @@ body {
     justify-content: center; 
     align-items: center;
     height: 100vh;
-    margin: 0;
-    padding: 20px 15px;
+    margin: 5rem;
+    padding: 0.938rem;
+    background-color: #94b3af;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #74ebd5, #ACB6E5);
     color: #333;
-    transition: background 0.5s ease;
 }
 
 h1 {
@@ -20,6 +19,7 @@ h1 {
     color: #004d40;
 }
 
+/* Formulário */
 form {
     display: flex;
     justify-content: center;
@@ -45,7 +45,9 @@ input[type="text"]:focus {
     box-shadow: 0 0 8px 2px #00796b;
 }
 
-button {
+/* Botões */
+button,
+.btn-nova-pesquisa {
     padding: 12px;
     font-size: 1rem;
     border-radius: 8px;
@@ -58,28 +60,15 @@ button {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover {
+button:hover,
+.btn-nova-pesquisa:hover {
     background-color: #004d40;
     box-shadow: 0 6px 15px rgba(0,77,64,0.6);
 }
 
-.btn-nova-pesquisa {
-  display: none;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: none;
-  background-color: #00796b;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-nova-pesquisa:hover {
-  background-color: #004d40;
-}
-
-#clima-resultado, #weather-result {
+/* Resultado do Clima */
+#clima-resultado, 
+#weather-result {
     border-radius: 12px;
     font-size: 1.25rem;
     text-align: center;
@@ -101,11 +90,117 @@ button:hover {
     flex-shrink: 0;
 }
 
-/* Texto do clima */
 .clima-texto p {
     margin: 0;
     font-size: 1.2rem;
     text-align: left;
     font-weight: 400;
-    color: inherit;
+}
+
+/* Seletor de Unidade */
+#unidade-container {
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    color: #004d40;
+    font-size: 1.1rem;
+    user-select: none;
+}
+
+#unidade-container label {
+    margin-right: 10px;
+}
+
+#tempUnit {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+#tempUnit:focus {
+    outline: none;
+    box-shadow: 0 0 8px 2px #00796b;
+}
+
+/* historico de pesquisas */
+#historico-pesquisas {
+    margin-top: 2.5rem 0;
+    max-width: 420px;
+    width: 100%;
+    background: #e0f2f1;
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 3px 10px rgba(0, 77, 64, 0.15);
+    color: #004d40;
+    font-weight: 600;
+}
+
+#historico-pesquisas h2 {
+    margin: 0 0 15px 0;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #00796b;
+    padding-bottom: 6px;
+}
+
+#listaHistorico {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#listaHistorico li {
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+    background: #00796b;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 3px 7px rgba(0, 121, 107, 0.5);
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+#listaHistorico li:hover {
+    background-color: #004d40;
+}
+
+
+/* Responsividade */
+@media (max-width: 480px) {
+    body {
+        margin-bottom: 5rem;
+    }
+
+    .clima-container {
+    flex-direction: column; /* empilha verticalmente */
+    align-items: center;    /* centraliza ícone e texto */
+    text-align: center;     /* centraliza o texto dentro da div */
+   }
+
+    .clima-icon {
+    margin-bottom: 0.313rem; /* espaço entre ícone e texto */
+  }
+    form {
+        width: 85%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button, 
+    #tempUnit {
+        width: 85%;
+    }
+
+    #historico-pesquisas {
+        margin-top: 30px;
+        padding: 15px 20px;
+    }
+}
+
+.hidden {
+    display: none !important;
 }

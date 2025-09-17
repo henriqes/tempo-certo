@@ -1,6 +1,6 @@
 # Tempo Certo
 
-Este projeto é um **Dashboard de Clima** simples que permite ao usuário consultar o clima atual de qualquer cidade utilizando a API do OpenWeatherMap. A interface exibe temperatura, descrição e ícone representativo do clima.
+Este projeto é um **Dashboard de Clima** simples que permite ao usuário consultar o clima atual de qualquer cidade utilizando a API do OpenWeatherMap. A interface exibe temperatura, descrição, sensação térmica e ícone representativo do clima.
 
 ---
 
@@ -8,7 +8,8 @@ Este projeto é um **Dashboard de Clima** simples que permite ao usuário consul
 
 - Consulta o clima atual por cidade.  
 - Exibe temperatura, descrição e ícone representativo do clima.  
-- Botão para realizar uma nova pesquisa, que reseta a interface.  
+- Histórico das últimas pesquisas (armazenado localmente).  
+- Permite escolher unidades de temperatura (Celsius ou Fahrenheit).  
 - Mensagens de erro para cidade não encontrada ou campo vazio.
 
 ---
@@ -30,9 +31,8 @@ Você precisa obter uma chave (API Key) gratuita no site do [OpenWeatherMap](htt
 
 ## Melhorias Futuras
 
-- Adicionar previsão estendida (dias seguintes).  
-- Implementar histórico de pesquisas.  
-- Incluir opções para escolher unidades (Fahrenheit/Celsius).
+- Adicionar previsão estendida (dias seguintes).
+- Melhorar responsividade e layout mobile.
 
 ---
 
