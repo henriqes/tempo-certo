@@ -2,6 +2,8 @@
 
 Este projeto é um **Dashboard de Clima** simples que permite ao usuário consultar o clima atual de qualquer cidade utilizando a API do OpenWeatherMap. A interface exibe temperatura, descrição, sensação térmica e ícone representativo do clima.
 
+🔗 [Acesse o projeto online](https://tempo-certo-alpha.vercel.app/)
+
 ---
 
 ## Funcionalidades
@@ -11,6 +13,12 @@ Este projeto é um **Dashboard de Clima** simples que permite ao usuário consul
 - Histórico das últimas pesquisas (armazenado localmente).  
 - Permite escolher unidades de temperatura (Celsius ou Fahrenheit).  
 - Mensagens de erro para cidade não encontrada ou campo vazio.
+
+---
+
+## Demonstração
+
+![Gif do Tempo Certo](./tempo-certo.gif)
 
 ---
 
